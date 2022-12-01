@@ -7,7 +7,6 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -29,23 +28,17 @@ Users should be able to:
 |---|---|
 |![](./screenshots/mobile.png)|![](./screenshots/desktop.png)|
 
-### Links
-
-- Solution URL: [Add solution URL here](https://github.com/chegx/faq)
-- Live Site URL: [Add live site URL here](https://chegx.github.io/faq/)
-
 ## My process
 
 ### Built with
 
 - CSS custom properties
 - Mobile-first workflow
-- JavaScript
 
 ### What I learned
 
 - Using multiple background images. The first url image covers the second one.
-- (JavaScript) I put a question and an icon in one button for simplicity. I made a variable that takes id of the clicked button. That id is equals to indexes of the related hide element and arrow icon.
+- (with out JavaScript) I used psudo-selector after for adding contents.
 
 ## Author
 
