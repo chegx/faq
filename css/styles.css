@@ -1,0 +1,164 @@
+:root {
+  /* Text */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  /* Background gradient: */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /* Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+}
+
+main {
+  background-color: hsl(240, 5%, 98%);
+  border-radius: 2.5rem;
+  width: 91%;
+  max-width: 40rem;
+  box-shadow: -1rem 2rem 2rem hsla(0, 0%, 0%, 20%);
+  margin: 13rem 0 8rem;
+}
+
+.bg {
+  position: relative;
+}
+
+.box {
+  display: none;
+}
+
+.woman {
+  position: absolute;
+  bottom: -7.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+}
+
+.faq {
+  padding: 11rem 2rem 3rem 2.5rem;
+  background-image: url(../images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center top 0;
+  background-size: 75%;
+}
+
+h1, p, span {
+  width: 90%;
+}
+
+h1 {
+  color: var(--very-dark-desaturated-blue);
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+span {
+  display: none;
+  color: var(--dark-grayish-blue);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  color: hsl(240, 6%, 30%);
+  cursor: pointer;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  padding: 0 0.5rem 1rem 0;
+  user-select: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+button:hover {
+  color: var(--soft-red);
+}
+
+.arrow {
+  margin-left: 1rem;
+}
+
+hr {
+  background-color: var(--light-grayish-blue);
+  border-width: 0;
+  height: 0.1rem;
+  margin: 1.7rem 0;
+}
+
+/* === JS CLASSES === */
+.show {
+  display: block;
+}
+
+.rotate {
+  transform: rotateX(180deg);
+}
+
+.dark-bold {
+  color: var(--very-dark-desaturated-blue);
+  font-weight: 700;
+}
+
+/* === DESKTOP === */
+@media (min-width:1024px) {
+  main {
+    display: flex;
+    width: 65%;
+    max-width: 100rem;
+    margin: 2rem 0;
+  }
+
+  .box {
+    display: block;
+    position: absolute;
+    left: -24%;
+    top: 40%;
+    width: 50%;
+    max-width: 20rem;
+  }
+
+  .woman {
+    display: none;
+  }
+
+  .bg {
+    width: 42%;
+    background-image: url(../images/illustration-woman-online-desktop.svg), url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: right 0 center, right 0 bottom 33%;
+    background-size: 120%, auto;
+  }
+
+  .faq {
+    width: 37%;
+    padding: 4rem 11% 6.5rem 10%;
+    background-image: none;
+  }
+
+  h1 {
+    text-align: left;
+    margin-bottom: 3.8rem;
+  }
+}
