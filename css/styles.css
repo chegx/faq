@@ -27,7 +27,7 @@ body {
 main {
   background-color: hsl(240, 5%, 98%);
   border-radius: 2.5rem;
-  width: 91%;
+  width: 90%;
   max-width: 40rem;
   box-shadow: -1rem 2rem 2rem hsla(0, 0%, 0%, 20%);
   margin: 13rem 0 8rem;
@@ -43,7 +43,7 @@ main {
 
 .woman {
   position: absolute;
-  bottom: -7.5rem;
+  bottom: -7rem;
   left: 50%;
   transform: translateX(-50%);
   width: 75%;
@@ -57,22 +57,11 @@ main {
   background-size: 75%;
 }
 
-h1, p, span {
-  width: 90%;
-}
-
 h1 {
   color: var(--very-dark-desaturated-blue);
   font-size: 3rem;
   margin-bottom: 3rem;
   text-align: center;
-}
-
-span {
-  display: none;
-  color: var(--dark-grayish-blue);
-  font-size: 1.2rem;
-  line-height: 1.4;
 }
 
 button {
@@ -86,10 +75,8 @@ button {
   padding: 0 0.5rem 1rem 0;
   user-select: none;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   text-align: left;
+  position: relative;
 }
 
 button:hover {
@@ -98,6 +85,7 @@ button:hover {
 
 .arrow {
   margin-left: 1rem;
+  float: right;
 }
 
 hr {
@@ -107,18 +95,39 @@ hr {
   margin: 1.7rem 0;
 }
 
-/* === JS CLASSES === */
-.show {
-  display: block;
-}
-
-.rotate {
-  transform: rotateX(180deg);
-}
-
-.dark-bold {
+button:focus {
   color: var(--very-dark-desaturated-blue);
   font-weight: 700;
+}
+
+button:focus::after {
+  color: var(--dark-grayish-blue);
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 1rem;
+  margin-bottom: -0.9rem;
+}
+
+.one:focus::after {
+  content: "You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.";
+}
+
+.two:focus::after {
+  content: "No more than 2GB. All files in your account must fit your allotted storage space.";
+}
+
+.three:focus::after {
+  content: "Click \0022 Forgot password\0022  from the login page or \0022 Change password\0022  from your profile page. A reset link will be emailed to you.";
+}
+
+.four:focus::after {
+  content: "Yes! Send us a message and we’ll process your request no questions asked."
+}
+
+.five:focus::after {
+  content: "Chat and email support is available 24/7. Phone lines are open during normal business hours."
 }
 
 /* === DESKTOP === */
