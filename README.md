@@ -45,7 +45,6 @@ Users should be able to:
 ### What I learned
 
 - Using multiple background images. The first url image covers the second one.
-- (JavaScript) I put a question and an icon in one button for simplicity. I made a variable that takes id of the clicked button. That id is equals to indexes of the related hide element and arrow icon.
 
 ## Author
 
