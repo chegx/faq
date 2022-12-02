@@ -33,7 +33,7 @@ main {
   margin: 13rem 0 8rem;
 }
 
-.bg {
+.bg-area {
   position: relative;
 }
 
@@ -49,74 +49,75 @@ main {
   width: 75%;
 }
 
-.faq {
-  padding: 11rem 2rem 3rem 2.5rem;
+.faq-area {
+  padding: 11rem 2rem 4.5rem 2.5rem;
   background-image: url(../images/bg-pattern-mobile.svg);
   background-repeat: no-repeat;
   background-position: center top 0;
   background-size: 75%;
 }
 
-h1, p, span {
-  width: 90%;
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  cursor: pointer;
 }
 
 h1 {
   color: var(--very-dark-desaturated-blue);
   font-size: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-span {
-  display: none;
-  color: var(--dark-grayish-blue);
-  font-size: 1.2rem;
-  line-height: 1.4;
-}
-
-button {
-  background-color: inherit;
-  border: none;
+p {
   color: hsl(240, 6%, 30%);
-  cursor: pointer;
-  font-family: 'Kumbh Sans', sans-serif;
   font-size: 1.35rem;
   font-weight: 400;
-  padding: 0 0.5rem 1rem 0;
-  user-select: none;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
 }
 
-button:hover {
+p:hover {
   color: var(--soft-red);
 }
 
 .arrow {
   margin-left: 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  width: 90%;
+  transition: .2s ease;
+}
+
+span {
+  color: var(--dark-grayish-blue);
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 hr {
   background-color: var(--light-grayish-blue);
   border-width: 0;
   height: 0.1rem;
-  margin: 1.7rem 0;
+  margin: 0.3rem 0;
 }
 
 /* === JS CLASSES === */
-.show {
-  display: block;
+.active .answer {
+  max-height: 30rem;
+  margin-bottom: 1.2rem;
 }
 
-.rotate {
-  transform: rotateX(180deg);
+.rotate .arrow {
+  transform: rotate(180deg);
 }
 
-.dark-bold {
+.dark-bold p {
   color: var(--very-dark-desaturated-blue);
   font-weight: 700;
 }
@@ -143,7 +144,7 @@ hr {
     display: none;
   }
 
-  .bg {
+  .bg-area {
     width: 42%;
     background-image: url(../images/illustration-woman-online-desktop.svg), url(../images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
@@ -151,14 +152,14 @@ hr {
     background-size: 120%, auto;
   }
 
-  .faq {
+  .faq-area {
     width: 37%;
-    padding: 4rem 11% 6.5rem 10%;
+    padding: 4rem 11% 8rem 10%;
     background-image: none;
   }
 
   h1 {
     text-align: left;
-    margin-bottom: 3.8rem;
+    margin-bottom: 2.5rem;
   }
 }
