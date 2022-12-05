@@ -43,9 +43,9 @@ main {
 
 .woman {
   position: absolute;
-  top: calc(50% - 2rem) ;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
   width: 75%;
 }
 
@@ -134,9 +134,9 @@ hr {
   .box {
     display: block;
     position: absolute;
-    left: -24%;
-    top: calc(50% + 4rem);
-    transform: translateY(-50%);
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -25%);
     width: 50%;
     max-width: 20rem;
   }
